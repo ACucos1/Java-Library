@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="461.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarian.AdminController">
+    <children>
+        <Text layoutX="341.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Admin" />
+        <TextField fx:id="firstName" layoutX="25.0" layoutY="48.0" promptText="First Name" />
+        <TextField fx:id="lastName" layoutX="25.0" layoutY="80.0" promptText="Last Name" />
+        <TextField fx:id="phoneNumber" layoutX="25.0" layoutY="116.0" promptText="Phone Number" />
+        <TextField fx:id="address" layoutX="25.0" layoutY="148.0" promptText="Address" />
+        <TextField fx:id="emailAddress" layoutX="25.0" layoutY="181.0" promptText="Email Address" />
+        <TextField fx:id="libName" layoutX="25.0" layoutY="214.0" promptText="Library Name" />
+        <TextField fx:id="date" layoutX="25.0" layoutY="248.0" promptText="Start Date" />
+        <Button layoutX="70.0" layoutY="285.0" mnemonicParsing="false" onAction="#add" text="Register" />
+        <Button layoutX="320.0" layoutY="254.0" mnemonicParsing="false" onAction="#delete" text="Delete" />
+        <Button fx:id="backButton" layoutX="239.0" layoutY="254.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Logout" />
+        <Text layoutX="52.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register Librarian " />
+        <Label fx:id="firstNameLabel" layoutX="144.0" layoutY="319.0" text="First Name:" />
+        <Label fx:id="lastNameLabel" layoutX="143.0" layoutY="361.0" text="Last Name: " />
+        <Label fx:id="libraryLabel" layoutX="281.0" layoutY="319.0" text="Library:" />
+        <Label fx:id="phoneLabel" layoutX="282.0" layoutY="361.0" text="Phone:" />
+        <Label fx:id="addressLabel" layoutX="442.0" layoutY="319.0" text="Address:" />
+        <Label fx:id="emailLabel" layoutX="450.0" layoutY="361.0" text="Email:" />
+        <Button layoutX="477.0" layoutY="254.0" mnemonicParsing="false" onAction="#generateReport" text="Generate Report" />
+      <TableView fx:id="listView" layoutX="239.0" layoutY="41.0" onMouseClicked="#detail" prefHeight="200.0" prefWidth="341.0">
+        <columns>
+          <TableColumn fx:id="tcLibID" prefWidth="75.0" text="librarianID" />
+          <TableColumn fx:id="tcFname" prefWidth="75.0" text="fName" />
+          <TableColumn fx:id="tcLname" prefWidth="75.0" text="lName" />
+          <TableColumn fx:id="tcLibName" prefWidth="75.0" text="libName" />
+          <TableColumn fx:id="tcDate" prefWidth="75.0" text="date" />
+          <TableColumn fx:id="tcPhoneNum" prefWidth="75.0" text="phoneNumber" />
+          <TableColumn fx:id="tcAddress" prefWidth="75.0" text="address" />
+          <TableColumn fx:id="tcEmail" prefWidth="75.0" text="emailAddress" />
+        </columns>
+      </TableView>
+    </children>
+</AnchorPane>

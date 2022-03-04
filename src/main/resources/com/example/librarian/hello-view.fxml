@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarian.HelloController">
+    <right>
+        <AnchorPane prefHeight="400.0" prefWidth="414.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="wrongInfo" layoutX="78.0" layoutY="128.0" textFill="red" />
+                <Label layoutX="78.0" layoutY="128.0" text="Username" />
+                <Label layoutX="78.0" layoutY="192.0" text="Password" />
+                <TextField fx:id="usernameInput" layoutX="148.0" layoutY="124.0" />
+                <PasswordField fx:id="passwordInput" layoutX="148.0" layoutY="188.0" />
+                <RadioButton fx:id="adminButton" layoutX="148.0" layoutY="254.0" mnemonicParsing="false" text="Admin">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="verify" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="libraryButton" layoutX="240.0" layoutY="254.0" mnemonicParsing="false" text="Librarian" toggleGroup="$verify" />
+                <Button fx:id="loginButton" layoutX="105.0" layoutY="325.0" mnemonicParsing="false" onAction="#onLoginButtonClick" text="Login" />
+                <Button fx:id="backButton" layoutX="250.0" layoutY="325.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back to Main Page" />
+                <Text layoutX="167.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Management System" />
+                <Label fx:id="labelLogin" layoutX="156.0" layoutY="89.0" text="Please Log in to continue" textFill="#e10c0c" />
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>
